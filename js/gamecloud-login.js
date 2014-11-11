@@ -115,7 +115,7 @@ function ReadCredentials() {
  * @constructor
  */
 function SendToServer(json, callback) {
-    $.post("http://127.0.0.1:8888/api/1/", json, callback);
+    $.post(Config.gamecloudAddress, json, callback);
 }
 
 /**

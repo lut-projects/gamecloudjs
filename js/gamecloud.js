@@ -12,7 +12,9 @@
 // Much code such simple wow
 //
 
-var SERVER_ADDRESS = "https://54.220.223.184:8843"
+//var SERVER_ADDRESS = "https://54.220.223.184:8843";
+var SERVER_ADDRESS = Config.gamecloudAddress;
+
 
 
 function httpGet(theUrl) {
