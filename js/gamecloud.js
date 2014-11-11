@@ -5,7 +5,7 @@
  * Gamecloud interfacing library for javascript
  * (http request simplifier)
  */
-    
+
 var SERVER_ADDRESS = Config.gamecloudAddress;
 
 /**
@@ -55,7 +55,8 @@ Gamecloud.prototype.gainItem = function (authkey, hash, playerId, characterId) {
         "authkey" : authkey,
         "hash" : hash,
         "playerId" : playerId,
-        "characterId" : characterId
+        "characterId" : characterId,
+        "sessionId" : this.session
     };
 
 
@@ -73,7 +74,8 @@ Gamecloud.prototype.loseItem = function (authkey, hash, playerId, characterId) {
         "authkey" : authkey,
         "hash" : hash,
         "playerId" : playerId,
-        "characterId" : characterId
+        "characterId" : characterId,
+        "sessionId" : this.session
     };
 
     $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
@@ -90,7 +92,8 @@ Gamecloud.prototype.hasItem = function (authkey, hash, playerId, characterId) {
         "authkey" : authkey,
         "hash" : hash,
         "playerId" : playerId,
-        "characterId" : characterId
+        "characterId" : characterId,
+        "sessionId" : this.session
     };
 
     $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
@@ -107,7 +110,8 @@ Gamecloud.prototype.giveAchievement = function (authkey, hash, playerId, charact
         "authkey" : authkey,
         "hash" : hash,
         "playerId" : playerId,
-        "characterId" : characterId
+        "characterId" : characterId,
+        "sessionId" : this.session
     };
 
     $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
@@ -124,7 +128,8 @@ Gamecloud.prototype.hasAchievement = function (authkey, hash, playerId, characte
         "authkey" : authkey,
         "hash" : hash,
         "playerId" : playerId,
-        "characterId" : characterId
+        "characterId" : characterId,
+        "sessionId" : this.session
     };
 
     $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
@@ -141,7 +146,8 @@ Gamecloud.prototype.triggersEvent = function (authkey, hash, playerId, character
         "authkey" : authkey,
         "hash" : hash,
         "playerId" : playerId,
-        "characterId" : characterId
+        "characterId" : characterId,
+        "sessionId" : this.session
     };
 
     $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
@@ -158,7 +164,8 @@ Gamecloud.prototype.hasTriggeredEvent = function (authkey, hash, playerId, chara
         "authkey" : authkey,
         "hash" : hash,
         "playerId" : playerId,
-        "characterId" : characterId
+        "characterId" : characterId,
+        "sessionId" : this.session
     };
 
     $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
