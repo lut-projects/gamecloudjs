@@ -21,7 +21,7 @@ function Gamecloud() {
  * Initializes the session
  */
 Gamecloud.prototype.initializeSession = function() {
-    this.session = moment().toIsoString() + this.randomString(7);
+    this.session = "Session-" + moment() + this.randomString(7);
 };
 
 /**
