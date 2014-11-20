@@ -10,6 +10,8 @@ $(document).ready(function() {
     $('#gamecloud-login-button').on('click', Login);
     $('#gamecloud-logout-button').on('click', Logout);
     $('#gamecloud-switch-view-button').on('click', SwitchLoginCreateAccount);
+    $('#gamecloud-bar-hide-button').on('click', SwitchGamecloudBar);
+    $('#gamecloud-navbar-show-button').on('click', SwitchGamecloudBar);
 
     // Hide the logout
     $('#gamecloud-logged').hide();
@@ -30,6 +32,11 @@ function Create() {
     var json = ReadCreateData();
     SendToServer(json, CreateCallback);
 
+}
+
+function SwitchGamecloudBar() {
+    // Toggle the navbar
+    $('#gamecloud-navbar').toggle();
 }
 
 /**
